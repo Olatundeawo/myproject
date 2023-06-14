@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block html_head %}
+	<link rel="stylesheet" href="../static/styles/context.css">
+{% endblock %}
+
+{% block content %}
+<nav class="navbar navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Connecta</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Welcome, {{ name }}</h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="/profile">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+          	</li>
+                </li>
+              </ul>
+              
+            </div>
+          </div>
+        </div>
+      </nav>
+
+
+      <div class="container p-3  question">
+        <!-- Content here -->
+        <p class="mx-auto p-2 align-middle ">
+
+            Introduction
+            Text-based communication 
+</p>
+</div>
+
+
+<div class="container p-3 answer text-bg-secondary">
+  <!-- Content here -->
+  <p class="mx-auto p-2 align-middle ">
+
+      Introduction
+      Text-based communication has become one of the most common forms of expression. We email, text message, tweet, and update our statuses on a daily basis. As a result, unstructured
+</p>
+</div>
+
+<form class="d-flex mt-3 mx-auto p-2" role="search">
+    <input class="form-control me-2 " type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-success" type="submit">Search</button>
+</form>
+
+{% endblock %}
+
